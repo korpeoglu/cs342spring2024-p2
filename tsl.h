@@ -1,8 +1,8 @@
 #ifndef _TSL_H_
 #define _TSL_H_
 
-// do not change this header file (tsh.h) 
-// it is the interface of the library to the applications
+// do not change this header file (tsl.h) 
+// it is the interface of the tsl library to the applications
 
 #include <ucontext.h>
 
