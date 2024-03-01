@@ -2,7 +2,7 @@
 CC	:= gcc
 CFLAGS := -g -Wall
 
-TARGETS :=  libtsl.a  app
+TARGETS :=  libtsl.a  app get
 
 all: $(TARGETS)
 
@@ -22,6 +22,9 @@ app.o: app.c  tsl.h
 
 app: app.o libtsl.a
 	gcc $(CFLAGS) -m32  -o $@ app.o  $(TSL_LIB)
+
+get: get.c
+	gcc $(CFLAGS) -m32 -o $@ $<
 
 clean:
 	rm -rf core  *.o $(TARGETS)
