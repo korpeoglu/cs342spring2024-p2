@@ -41,10 +41,9 @@ main(int argc, char **argv)
     printf("main: UESP saved in context structure con is 0x%x\n",  (unsigned int)  con.uc_mcontext.gregs[REG_UESP]);
     // maybe we don't need to use REG_UESP in this project.
 
-    printf("main: The value of ucontext_t.uc_stack is 0x%x\n", (unsigned int)con.uc_stack.ss_sp);
+    printf("main: The uc_stack.ss_sp field value in context structure is 0x%x\n", (unsigned int)con.uc_stack.ss_sp);
     // maybe we don't need to use uc_stack in this project.
 
-    
     // call a function
     foo(10, 20); // call foo(), which is getting and printing the context.
     
@@ -69,7 +68,7 @@ int foo(int p, int q)
     printf("foo: EIP (instruction pointer) saved in context structure con is 0x%x\n",  (unsigned int)  con.uc_mcontext.gregs[REG_EIP]);
     printf("foo: ESP (stack pointer) saved in context structure con is 0x%x\n",  (unsigned int)  con.uc_mcontext.gregs[REG_ESP]);
     printf("foo: UESP saved in context structure con is 0x%x\n",  (unsigned int)  con.uc_mcontext.gregs[REG_UESP]);
-    printf("foo: The value of ucontext_t.uc_stack is 0x%x\n", (unsigned int)con.uc_stack.ss_sp);
+    printf("main: The uc_stack.ss_sp field value in context structure is 0x%x\n", (unsigned int)con.uc_stack.ss_sp);
     return (0);
 }
 
