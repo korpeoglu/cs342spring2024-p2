@@ -4,6 +4,8 @@
 #include <stdlib.h>
 #include "tsl.h"
 
+// this is a sample application that is using tsl library to 
+// create and work with threads. 
 
 #define MAXCOUNT 1000
 #define YIELDPERIOD 100
