@@ -12,6 +12,17 @@
 #include <ucontext.h>
 #include "tsl.h"
 
+// you will implement your library in this file. 
+// you can define your internal structures, macros here. 
+// such as: #define ...
+// if you wish you can use another header file (not necessary). 
+// but you should not change the tsl.h header file. 
+// you can also define and use global variables here.
+// you can define and use additional functions (as many as you wish) 
+// in this file; besides the tsl library functions desribed in the assignment. 
+// these additional functions will not be available for 
+// applications directly. 
+
 int tsl_init(int salg);
 int tsl_create_thread (void (*tsf)(void *), void *targ);
 int tsl_yield (int tid);
