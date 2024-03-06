@@ -7,8 +7,8 @@
 #include <ucontext.h>
 
 
-#define TSL_MAXTHREADS 258
-#define TSL_STACKSIZE  32768
+#define TSL_MAXTHREADS 256 // maximum number of threads (including the main thread) that an application can have.
+#define TSL_STACKSIZE  32768 // bytes, i.e., 32 KB. This is the stack size for a new thread. 
 
 #define ALG_FCFS 1
 #define ALG_RANDOM 2
